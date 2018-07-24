@@ -46,16 +46,11 @@ module.exports = {
                 callback(err, null);
                 return;
             }
-
-
-
             bcrypt.compare(params.password, user.password, function(err, res) {
                 // res === true
                 if (err) {
                     callback(err, null);
                 }
-
-                
 
                 if (res === false) {
                     callback(err, null);
